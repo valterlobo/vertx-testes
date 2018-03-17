@@ -24,6 +24,18 @@ public class Runner {
 	public static void runExample(Class clazz) {
 		runExample(CORE_EXAMPLES_JAVA_DIR, clazz, new VertxOptions().setClustered(false), null);
 	}
+	
+	/**
+	 * Vertx.clusteredVertx(new VertxOptions().setClustered(true), ar -> {
+      if (ar.failed()) {
+        System.err.println("Cannot create vert.x instance : " + ar.cause());
+      } else {
+        Vertx vertx = ar.result();
+        vertx.deployVerticle(ConsumerApp.class.getName());
+      }
+    });
+
+	 */
 
 	public static void runExample(Class clazz, DeploymentOptions options) {
 		runExample(CORE_EXAMPLES_JAVA_DIR, clazz, new VertxOptions().setClustered(false), options);
