@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -11,6 +12,11 @@
 		<junit-jupiter.version>5.0.1</junit-jupiter.version>
 		<maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
 		<junit-platform-surefire-provider.version>1.0.1</junit-platform-surefire-provider.version>
+		<main.class>io.vertx.examples.spring.SpringExampleRunner</main.class>
+		<spring.data.jpa.version>2.0.5.RELEASE</spring.data.jpa.version> <!-- 1.8.0.RELEASE -->
+		<h2.version>1.4.191</h2.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<hibernate.version>4.3.10.Final</hibernate.version>
 		<assertj-core.version>3.8.0</assertj-core.version>
 	</properties>
 
@@ -25,6 +31,41 @@
 			<artifactId>vertx-web</artifactId>
 			<version>3.5.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-hazelcast</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-rx-java2</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+
+
+		<!-- Spring -->
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.data.jpa.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
 
 		<!-- Vert.x + web client -->
 

@@ -7,9 +7,9 @@ import io.vertx.core.http.HttpServer;
 import io.vertx.ext.web.Router;
 public class OlaWebServer  extends AbstractVerticle {
 	
-	/* VER exemple com RX 
+	/*
 	 * Ver exemplo com Spring 
-	 * Ver Exemplo  com Cluster 
+	 * Ver Exemplo  com Cluster- gerencia em mais de uma maquina 
 	 */
 	
 	  public static void main(String[] args) {
