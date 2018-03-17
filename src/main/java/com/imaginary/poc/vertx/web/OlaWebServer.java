@@ -3,8 +3,8 @@ package com.imaginary.poc.vertx.web;
 import com.imaginary.poc.vertx.util.Runner;
 
 import io.vertx.core.AbstractVerticle;
+import io.vertx.core.http.HttpServer;
 import io.vertx.ext.web.Router;
-
 public class OlaWebServer  extends AbstractVerticle {
 	
 	/* VER exemple com RX 
@@ -33,6 +33,7 @@ public class OlaWebServer  extends AbstractVerticle {
 	    		putHeader("content-type", "application/json").end("{\"name\": \"Valter Lobo\", \"github\": \"valterlobo1\"}"));
 	    //Content-Type: application/json
 	    
+       
 	    vertx.createHttpServer().requestHandler(router::accept).listen(8091);
 	   
 
